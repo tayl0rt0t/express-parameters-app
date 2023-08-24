@@ -16,6 +16,11 @@ app.get('/greeting/:name', (req,res) => {
     res.send('Hello, ' + req.params.name)
 })
 
+app.get('/tip/:t1/:t2', (req,res)=>{
+    res.send('Tip: ' + req.params.t1 * req.params.t2)
+})
+
+
 app.listen(PORT, function () {
     console.log(`Listening on port ${PORT}`);
   });
